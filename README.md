@@ -4,6 +4,10 @@ WARNING: This mod uses an insecure way to transmit webhooks between the server a
 
 SSHook is an easy way for users to upload screenshots to Discord using the webhook integration feature. Every time a user takes a screenshot, they will be prompted with a configurable list of webhooks (Discord channels) to upload the screenshot. The webhooks are synced between the client and server if the client has the 'enableServerOverride' config option set. This means that only the server owner has to define the webhooks; the mod handles syncing them. 
 
+![image](https://github.com/user-attachments/assets/2f5aa09a-eead-4c89-8ba1-ef5019241667)
+
+![image](https://github.com/user-attachments/assets/25a6b54a-35b3-4c4f-939a-0687ae5e71d4)
+
 
 ## CLIENTS:
   
