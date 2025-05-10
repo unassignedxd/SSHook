@@ -1,0 +1,6 @@
+{
+  "text.autoconfig.innademod.title": "SSHook: Screenshot Uploader via Discord Webhooks",
+  "text.autoconfig.sshook.option.enableUploadPrompt": "Enable Upload Prompt",
+  "text.autoconfig.sshook.option.useServerOverride": "Use Server Defined Webhooks",
+  "text.autoconfig.sshook.option.enableBotNameOverride": "Enable Bot Name/Avatars"
+}

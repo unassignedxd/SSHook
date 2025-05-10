@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.unassigned.sshook.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+      "ScreenshotMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
