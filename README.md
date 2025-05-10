@@ -1,4 +1,4 @@
-# SSHook: Simple Screenshot Uploader via. Discord Webhooks
+# SSHook: Simple Screenshot Uploader using Discord Webhooks
 
 WARNING: This mod uses an insecure way to transmit webhooks between the server and client. There is no encryption, and any packet sniffer could access the webhook. This is by design. This mod is intended for small groups of friends who want an easy and lightweight way to upload their screenshots to various channels in Discord. The risk with leaked webhooks is unintentional messages.
 
