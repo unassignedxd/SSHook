@@ -39,7 +39,7 @@ jobs:
         run: ./gradlew clean build
 
       - name: Publish (Modrinth/GitHub)
-        uses: Kir-Antipov/mc-publish@v3.3
+        uses: Kira-NT/mc-publish@v3.3.0
         with:
           modrinth-id: sshook
           modrinth-token: "${{env.MODRINTH_TOKEN}}"
