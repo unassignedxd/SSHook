@@ -28,10 +28,17 @@ import java.util.function.Consumer;
 public class ScreenshotMixin {
 
     @Inject(
-            method = "saveScreenshot(Ljava/io/File;Ljava/lang/String;Lnet/minecraft/client/gl/Framebuffer;Ljava/util/function/Consumer;)V",
+            method = "saveScreenshot(Ljava/io/File;Ljava/lang/String;Lnet/minecraft/client/gl/Framebuffer;ILjava/util/function/Consumer;)V",
             at = @At("TAIL")
     )
-    private static void onSaveScreenshot(File gameDirectory, @Nullable String fileName, Framebuffer framebuffer, Consumer<Text> messageReceiver, CallbackInfo ci) {
+    private static void saveScreenshot(
+            File gameDirectory,
+            @Nullable String fileName,
+            Framebuffer framebuffer,
+            int downscaleFactor,
+            Consumer<Text> messageReceiver,
+            CallbackInfo ci
+    ) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         Map<String, String> webhooks;
         if (!SSHookClientConfig.INSTANCE.enableUploadPrompt || player == null) return;

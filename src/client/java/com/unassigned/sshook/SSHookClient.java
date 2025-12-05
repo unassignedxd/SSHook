@@ -87,18 +87,18 @@ public class SSHookClient implements ClientModInitializer {
 
 		String playerName = player.getName().getString();
 		String playerUUID = player.getUuidAsString();
-		Vec3d pos = player.getPos();
+		Vec3d pos = player.getEntityPos();
 		String coordinates = String.format("%.2f, %.2f, %.2f", pos.x, pos.y, pos.z);
 		float yaw = player.getYaw();
 		String direction = getFacingDirection(yaw);
-		String biome = player.getWorld()
+		String biome = player.getEntityWorld()
 				.getBiome(player.getBlockPos())
 				.getKey()
 				.map(key -> key.getValue().getPath())
 				.orElse("unknown")
 				.replace("_", " ")
 				.toLowerCase(Locale.ROOT);
-		String dimension = player.getWorld().getRegistryKey().getValue().getPath().replace("_", " ");
+		String dimension = player.getEntityWorld().getRegistryKey().getValue().getPath().replace("_", " ");
 		String serverAddress = (instance.getCurrentServerEntry() == null) ? "N/A" : instance.getCurrentServerEntry().address;
 		if(!SERVER_CUSTOM_NAME.isEmpty()) serverAddress = SERVER_CUSTOM_NAME;
 
